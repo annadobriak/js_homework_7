@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 8</h1>
+    <p>
+      Створити функцію, яка виводить банер (у функцію передаються: зображення,
+      заголовок та посилання, куди переходимо при кліку на зображення (тег img
+      повине знаходитись у середині тега a:
+      <!-- <a> <img src="”шлях”" /> </a> -->
+    </p>
+
+    <script>
+      // 1.Введення необхідних даних
+      function getBanner(title, link, image) {
+        document.write(`
+        <div>
+          <h3>${title}</h3>
+          <a href="${link}"><img src= "${image}" alt=" " /> </a>
+        </div>
+        `)
+      }
+      const title = "Клікни на зображення..."
+      const link = "https://google.com"
+      const image = "../img/chrome-Logo.jpg"
+
+      let banner = getBanner(title, link, image)
+    </script>
+  </body>
+</html>

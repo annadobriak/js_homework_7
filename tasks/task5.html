@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 5</h1>
+    <p>
+      Створити окремі функції, які переводять: 1)Сантиметри у дюйми; 2)Кілограми
+      у фунти; 3)Кілометри у милі.
+    </p>
+
+    <script>
+      // 1.Опис функції
+      function convertCentimetersInches(num1) {
+        return num1 / 2.54
+      }
+      function convertKilogramsPounds(num1) {
+        return num1 * 2.205
+      }
+      function convertKilometersMiles(num1) {
+        return num1 / 1.609
+      }
+
+      // 2.Використання і розв"язання задачі
+      const numbCentimeters = parseInt(
+        prompt("Введіть довжину в сантиметрах", "0")
+      )
+      const numbKilograms = parseInt(prompt("Введіть вагу в кілограмах", "0"))
+      const numbKilometers = parseInt(
+        prompt("Введіть кількість кілометрів", "0")
+      )
+
+      let numInches = convertCentimetersInches(numbCentimeters)
+      let numPounds = convertKilogramsPounds(numbKilograms)
+      let numMiles = convertKilometersMiles(numbKilometers)
+
+      // 3.Виведення результату
+      document.write(`${numbCentimeters} см = ${numInches} дюймов <br>
+                      ${numbKilograms} кг = ${numPounds} фунтов <br>
+                      ${numbKilometers} км = ${numMiles} милі`)
+    </script>
+  </body>
+</html>

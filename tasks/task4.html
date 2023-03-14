@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 4</h1>
+    <p>
+      Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька
+      результатів: кількість парних, кількість додатних, кількість більших за
+      100.
+    </p>
+
+    <script>
+      // 1.Опис функції
+      function getMathematicalCalc(num1, num2, num3) {
+        let numbPairedNumbers = 0
+        let numbPositiveNumbers = 0
+        let numberGreaterNumbers = 0
+        for (let i = 0; i <= arguments.length; i++) {
+          if (arguments[i] % 2 === 0) numbPairedNumbers++
+          if (arguments[i] > 0) numbPositiveNumbers++
+          if (arguments[i] > 100) numberGreaterNumbers++
+        }
+        return `Кількість парних з введених чисел = ${numbPairedNumbers}<br>
+                Кількість додатних з введених чисел = ${numbPositiveNumbers}<br>
+                Кількість чисел більших за 100 = ${numberGreaterNumbers}`
+      }
+
+      // 2.Використання і розв"язання задачі
+      const numb1 = parseInt(prompt("Введіть перше число", "0"))
+      const numb2 = parseInt(prompt("Введіть друге число", "0"))
+      const numb3 = parseInt(prompt("Введіть третє число", "0"))
+
+      let result = getMathematicalCalc(numb1, numb2, numb3)
+
+      // 3.Виведення результату
+      document.write(`${result}`)
+    </script>
+  </body>
+</html>

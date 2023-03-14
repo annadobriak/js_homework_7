@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 6</h1>
+    <p>
+      Створити функцію, яка створює таблицю з вказаною кількістю рядків і
+      стовпців (таблиця заповнюється заданим фіксованим повідомленням).
+    </p>
+
+    <script>
+      // 1.Опис функції
+      function convertCentimetersInches(
+        numberRows,
+        numberColumns,
+        messageUser
+      ) {
+        document.write(`
+        <table border="2=x" style="display: inline-block; margin-right: 30px;">
+             <tbody>
+        `)
+        for (let r = 0; r < numberRows; r++) {
+          document.write("<tr>")
+          for (let c = 0; c < numberColumns; c++) {
+            document.write(`<td>${messageUser}</td>`)
+          }
+          document.write("</tr>")
+        }
+
+        document.write(`
+              </tbody>
+         </table>
+        `)
+      }
+
+      // 2.Використання і розв"язання задачі
+      const numberRows = parseInt(
+        prompt("Введіть кількість рядків в таблиці", "0")
+      )
+      const numberColumns = parseInt(
+        prompt("Введіть кількість стовпців в таблиці", "0")
+      )
+      const messageUser = prompt("Введіть повідомлення", "Hello...")
+
+      let resultingTable = convertCentimetersInches(
+        numberRows,
+        numberColumns,
+        messageUser
+      )
+    </script>
+  </body>
+</html>

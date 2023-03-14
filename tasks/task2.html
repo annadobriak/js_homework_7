@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 2</h1>
+    <p>
+      Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день
+      робочим.
+    </p>
+
+    <script>
+      // 1.Опис функції
+      function isWorkingDay(dayNumber) {
+        return dayNumber >= 1 && dayNumber <= 5
+      }
+      // 2.Використання і розв"язання задачі
+      const userDayNumber = parseInt(
+        prompt("Введіть день тижня від 1 до 7", "0")
+      )
+
+      const resultMessage = isWorkingDay(userDayNumber)
+        ? "День робочий"
+        : "День вихідний"
+      // 3.Виведення результату
+      document.write(resultMessage)
+    </script>
+  </body>
+</html>

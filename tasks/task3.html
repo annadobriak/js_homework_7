@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 3</h1>
+    <p>
+      Створити окремі функції, які для 4 чисел знаходять: 1)суму; 2)добуток;
+      3)середнє арифметичне; 4)мінімальне значення. .
+    </p>
+    <script>
+      // 1.Опис функції
+
+      function getSumNumbers(num1, num2, num3, num4) {
+        return num1 + num2 + num3 + num4
+      }
+      function getProductNumbers(num1, num2, num3, num4) {
+        return num1 * num2 * num3 * num4
+      }
+      function getAverageNum(num1, num2, num3, num4) {
+        return (num1 + num2 + num3 + num4) / 4
+      }
+      function getMinNumbers(num1, num2, num3, num4) {
+        let minNum
+        minNum = num1
+        if (minNum > num2) minNum = num2
+        if (minNum > num3) minNum = num3
+        if (minNum > num4) minNum = num4
+        return minNum
+      }
+
+      // 2.Використання і розв"язання задачі
+      const userNumb_1 = parseInt(prompt("Введіть довільне число", "0"))
+      const userNumb_2 = parseInt(prompt("Введіть довільне число", "0"))
+      const userNumb_3 = parseInt(prompt("Введіть довільне число", "0"))
+      const userNumb_4 = parseInt(prompt("Введіть довільне число", "0"))
+
+      const sumNumbers = getSumNumbers(
+        userNumb_1,
+        userNumb_2,
+        userNumb_3,
+        userNumb_4
+      )
+
+      const productNumbers = getProductNumbers(
+        userNumb_1,
+        userNumb_2,
+        userNumb_3,
+        userNumb_4
+      )
+
+      const averageNum = getAverageNum(
+        userNumb_1,
+        userNumb_2,
+        userNumb_3,
+        userNumb_4
+      )
+
+      const minNumbers = getMinNumbers(
+        userNumb_1,
+        userNumb_2,
+        userNumb_3,
+        userNumb_4
+      )
+
+      // 3.Виведення результату
+      document.write(`Сумма чотирьох введених чисел дорівнює ${sumNumbers}<br>`)
+      document.write(
+        `Добуток чотирьох введених чисел дорівнює ${productNumbers}<br>`
+      )
+      document.write(
+        `Середнє арифметичне чотирьох введених чисел дорівнює ${averageNum}<br>`
+      )
+      document.write(
+        `Мінімальне значення чотирьох введених чисел дорівнює ${minNumbers}<br>`
+      )
+    </script>
+  </body>
+</html>

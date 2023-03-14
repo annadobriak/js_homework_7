@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 7</h1>
+    <p>
+      Створити функцію, яка випадковим чином виводить на екран одне із 4
+      зображень (шляхи до зображень передаються у функцію)
+    </p>
+
+    <script>
+      // 1.Опис функції
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min
+      }
+      function getImageRandomPathImage(
+        pathImage1,
+        pathImage2,
+        pathImage3,
+        pathImage4
+      ) {
+        let randImageNum = getRandomInt(0, 4)
+        for (let i = 0; i <= arguments.length; i++) {
+          if (i === randImageNum)
+            document.write(`<img src= "${arguments[i]}" alt=" " />`)
+        }
+      }
+
+      // 2.Використання і розв"язання задачі
+      const pathImage1 = "../img/task7_1.jpg"
+      const pathImage2 = "../img/task7_2.jpg"
+      const pathImage3 = "../img/task7_3.jpg"
+      const pathImage4 = "../img/task7_4.jpg"
+
+      const linkImage = getImageRandomPathImage(
+        pathImage1,
+        pathImage2,
+        pathImage3,
+        pathImage4
+      )
+    </script>
+  </body>
+</html>
